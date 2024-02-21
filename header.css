@@ -1,0 +1,33 @@
+.icons a{
+    color: white
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(95, 95, 95);
+    height: 50px;
+}
+header .whatsapp{
+    color: white;
+    font-size: 22px;
+    padding-left: 5px;
+}
+header .icons{
+    display: flex;
+    gap: 20px;
+    font-size: 19px;
+    padding-right: 4px;
+}
+.icon-texts{
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    background-color: rgb(95, 95, 95);
+    font-size: 17px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+}
+.icon-texts p{
+    color: rgb(211, 211, 211);
+}
