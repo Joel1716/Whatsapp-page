@@ -9,11 +9,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-height: 1000px;
 }
 .container{
     background-color: rgb(63, 63, 63);
-    height: 625px;
+    height: auto;
     box-shadow: 5px 5px rgba(255,255,255,0.15);
     position: relative;
 }
