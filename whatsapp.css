@@ -101,3 +101,17 @@ padding-top: 2px;
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 580px) {
+  img {
+    width: 45px;
+    height: 45px;
+    border: 25px;
+  }
+  .title {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  .messages {
+    margin-bottom: 16px;
+  }
+}
