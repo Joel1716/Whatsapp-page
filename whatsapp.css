@@ -12,7 +12,6 @@ body {
 }
 .container {
   background-color: rgb(63, 63, 63);
-  height: auto;
   box-shadow: 5px 5px rgba(255, 255, 255, 0.15);
   width: 375px;
   position: absolute;
@@ -88,6 +87,7 @@ span {
 }
 .chats {
   display: flex;
+  flex-direction: row;
   gap: 5px;
 }
 .open-message {
