@@ -85,11 +85,11 @@ span {
   border-radius: 90%;
   margin-left: 1px;
 }
-/* .chats {
+.chats {
   display: flex;
   flex-direction: row;
   gap: 5px;
-} */
+}
 .open-message {
   display: flex;
   align-items: center;
