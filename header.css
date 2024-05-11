@@ -21,8 +21,7 @@ header .icons{
 }
 .icon-texts{
     display: flex;
-    justify-content: center;
-    gap: 65px;
+    justify-content: space-around;
     background-color: rgb(95, 95, 95);
     font-size: 17px;
     padding-top: 7px;
