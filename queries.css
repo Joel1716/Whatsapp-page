@@ -28,6 +28,9 @@
     width: 100vw;
     height: 100%;
   }
+  main {
+    height: 100vh;
+  }
   img {
     width: 6.5rem;
     height: 6.5rem;
