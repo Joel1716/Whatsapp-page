@@ -9,13 +9,10 @@ html {
 }
 body {
   background-color: #f2eadf;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto 0; */
 }
 .container {
   box-shadow: 5px 5px rgba(255, 255, 255, 0.15);
+  margin-top: 2rem;
   width: 45rem;
   position: absolute;
   top: 50%;
