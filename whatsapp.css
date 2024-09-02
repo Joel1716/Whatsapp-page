@@ -12,13 +12,13 @@ body {
 }
 .container {
   box-shadow: 5px 5px rgba(255, 255, 255, 0.15);
-  margin-top: 2rem;
+  margin-top: 2.7rem;
   width: 45rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 main {
   background-color: rgb(63, 63, 63);
@@ -94,6 +94,7 @@ span {
   flex-direction: column;
   gap: 12px;
   padding-right: 1rem;
+  background-color: rgb(63, 63, 63);
 }
 .title {
   font-size: 1.8rem;
