@@ -13,7 +13,7 @@ function containers(e) {
       const titleElement = clickedElement.querySelector(".title");
       console.log(titleElement);
       container.innerHTML = `
-            <div class="new-container">
+      <div class="new-container">
         <header class="new-clicked-header">
           <div class="arrow-pic-name">
             <ion-icon name="arrow-back-outline" class="new-icons"></ion-icon>
@@ -28,8 +28,8 @@ function containers(e) {
               class="new-icons"
             ></ion-icon>
           </div>
-        </header>
-        <section class="message-send-container">
+         </header>
+         <section class="message-send-container">
           <div class="text-container">
             <div class="user-container">
               <p>How far gee</p>
@@ -55,7 +55,7 @@ function containers(e) {
               <ion-icon name="mic-outline"></ion-icon>
             </div>
           </div>
-        </section> 
+         </section> 
         `;
       createMessages();
       // STYLE FOR CONTAINER
