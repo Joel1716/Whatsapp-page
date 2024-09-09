@@ -71,6 +71,11 @@ function createMessages() {
   const textContainer = document.querySelector(".text-container");
   inputEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
+       const currentTime = new Date().toLocaleString("en-Us", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      });
       const newMessageContainer = document.createElement("div");
       newMessageContainer.classList.add("user-container");
       newMessageContainer.style.marginBottom = "1rem";
@@ -78,7 +83,7 @@ function createMessages() {
       newMessageText.innerHTML = inputEl.value;
       const newMessageTime = document.createElement("p");
       newMessageTime.classList.add("user-timer");
-      newMessageTime.innerHTML = "21:18";
+      newMessageTime.innerHTML = `${currentTime} <ion-icon name="checkmark-done-outline"></ion-icon>`;
       newMessageContainer.append(newMessageText, newMessageTime);
       textContainer.append(newMessageContainer);
       inputEl.value = "";
