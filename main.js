@@ -34,12 +34,12 @@ function containers(e) {
             <div class="user-container">
               <p>How far gee</p>
               <p class="user-timer">
-                21:06 <ion-icon name="checkmark-done-outline"></ion-icon>
+                21:06 PM <ion-icon name="checkmark-done-outline"></ion-icon>
               </p>
             </div>
             <div class="user-received-container">
               <p>Am fine, any update about the room</p>
-              <p class="user-received-timer">21:15</p>
+              <p class="user-received-timer">21:15 PM</p>
             </div>
           </div>
           <div class="input-container">
