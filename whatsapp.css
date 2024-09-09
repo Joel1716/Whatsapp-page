@@ -200,6 +200,9 @@ span {
   bottom: 0;
   color: #868686;
 }
+.user-received-timer {
+  right: 5px;
+}
 .user-timer {
   display: flex;
   align-items: center;
