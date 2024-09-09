@@ -186,6 +186,9 @@ span {
   padding: 1.3rem 2rem 2rem 0.5rem;
   position: relative;
 }
+.user-container {
+  min-width: 20%;
+}
 .user-texts + p {
   justify-self: center;
 }
