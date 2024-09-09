@@ -24,7 +24,7 @@
   body {
     display: inline-block;
   }
- .overall-container {
+  .overall-container {
     width: 100%;
     height: 100vh;
     margin-top: 0;
@@ -37,6 +37,9 @@
     height: 6.5rem;
     border-radius: 4rem;
   }
+  /* .messages {
+      align-items: end;
+    } */
   .messages-container {
     gap: 2rem;
     margin-top: 30px;
@@ -80,36 +83,36 @@
 
 @media (max-width: 31em) {
   .title {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
   .actual-message {
     font-size: 1.7rem;
     height: 2rem;
   }
   .actual-time {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
   img {
     width: 5.5rem;
     height: 5.5rem;
   }
   .span {
-    font-size: 1.8rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1.7rem;
+    padding: 0.4rem 0.75rem;
   }
   .archived {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .icon-texts {
     font-size: 2.2rem;
     padding-top: 2rem;
   }
   .chat-number {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 1.4rem;
+    padding: 0.4rem 0.75rem;
   }
   header .whatsapp {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .messages-container {
     margin-top: 2rem;
