@@ -1,6 +1,6 @@
 const overallContainer = document.querySelector(".overall-container");
 const container = document.querySelector(".container");
-const mainContainer = document.getElementById("js-main");
+const mainContainer = document.getElementById("js-messages");
 const messages = document.querySelectorAll(".messages");
 
 mainContainer.addEventListener("click", containers);
