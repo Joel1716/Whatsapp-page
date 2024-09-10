@@ -23,14 +23,14 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgb(95, 95, 95);
   overflow-y: auto;
-  height: calc(100vh - 2rem);
+  height: 100vh;
 }
 .overall-container::-webkit-scrollbar {
   display: none;
 }
-.container {
+/* .container {
   height: 100vh;
-}
+} */
 main {
   background-color: rgb(63, 63, 63);
   padding-bottom: 1.5rem;
