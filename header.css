@@ -6,7 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(95, 95, 95);
-  height: 50px;
+  padding: 1.5rem 1rem;
 }
 header .whatsapp {
   color: white;
