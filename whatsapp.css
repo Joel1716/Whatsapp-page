@@ -186,7 +186,7 @@ span {
   position: relative;
 }
 .user-container {
-  min-width: 20%;
+  min-width: 25%;
 }
 .user-texts + p {
   justify-self: center;
