@@ -23,12 +23,8 @@
   /* MAIN CONTENT PART */
   .overall-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-top: 0;
-  }
-  .container {
-    height: 100svh;
-    min-height: 100vh;
   }
   img {
     width: 6.5rem;
