@@ -21,9 +21,6 @@
   }
 
   /* MAIN CONTENT PART */
-  body {
-    display: inline-block;
-  }
   .overall-container {
     width: 100%;
     height: auto;
