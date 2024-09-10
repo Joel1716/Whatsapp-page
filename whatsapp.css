@@ -19,7 +19,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgb(95, 95, 95);
   overflow-y: auto;
-  height: 100vh;
+  height: calc(100vh - 1rem);
 }
 .overall-container::-webkit-scrollbar {
   display: none;
