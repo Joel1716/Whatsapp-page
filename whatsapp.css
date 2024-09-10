@@ -2,17 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
 }
 html {
   font-size: 62.5%;
 }
 body {
   background-color: #f2eadf;
-  /* font-family: "Kameron", serif; */
-  font-family: cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: sans-serif;
 }
 .overall-container {
   box-shadow: 5px 5px rgba(255, 255, 255, 0.15);
