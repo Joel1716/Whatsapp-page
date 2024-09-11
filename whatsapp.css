@@ -19,14 +19,15 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgb(95, 95, 95);
   overflow-y: auto;
-  height: 100%;
+  height: 98%;
+  max-height: 70em;
 }
 .overall-container::-webkit-scrollbar {
   display: none;
 }
-/* .container {
-  height: 100vh;
-} */
+.container {
+  height: 100%;
+}
 main {
   background-color: rgb(63, 63, 63);
   padding-bottom: 1.5rem;
@@ -98,7 +99,7 @@ span {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 13px;
   padding-right: 1rem;
   background-color: rgb(63, 63, 63);
   overflow: auto;
