@@ -53,7 +53,7 @@ main {
   padding-right: 1rem;
 }
 img {
-  width: 5rem;
+  width: 4.9rem;
   height: 5rem;
   object-fit: cover;
   border-radius: 3rem;
@@ -124,7 +124,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   background-color: #2b2b2b;
 }
 .new-icons {
@@ -144,8 +144,6 @@ span {
   cursor: pointer;
 }
 .clicked-image {
-  width: 4rem;
-  height: 4rem;
   cursor: pointer;
 }
 .new-icons-container {
