@@ -1,21 +1,21 @@
+/// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
 const container = document.querySelector(".container");
 const containerStyles = overallContainer.innerHTML;
 const mainContainer = document.getElementById("js-messages");
-const messages = document.querySelectorAll(".messages");
 const happyIcon = document.querySelector(".happy-icon");
 const headerEl = document.getElementById("header");
 
 mainContainer.addEventListener("click", containers);
-function containers(e) {
-  let clickedElement = e.target;
+function containers(event) {
+  let clickedElement = event.target;
   while (clickedElement !== mainContainer) {
     if (clickedElement.classList.contains("messages")) {
       const imageElement = clickedElement.querySelector("img");
       imageElement.classList.add("clicked-image");
       const titleElement = clickedElement.querySelector(".title");
-      console.log(titleElement);
-      container.innerHTML = `
+      const actualMessage = clickedElement.querySelector("#js-span-message");
+      overallContainer.innerHTML = `
       <div class="new-container">
         <header class="new-clicked-header">
           <div class="arrow-pic-name">
@@ -31,24 +31,19 @@ function containers(e) {
               class="new-icons"
             ></ion-icon>
           </div>
-         </header>
-         <section class="message-send-container">
+        </header>
+        <section class="message-send-container">
+        <h2 class='new-container-message'>New Message</h2>
           <div class="text-container">
-            <div class="user-container">
-              <p>How far gee</p>
-              <p class="user-timer">
-                21:06 PM <ion-icon name="checkmark-done-outline"></ion-icon>
-              </p>
-            </div>
             <div class="user-received-container">
-              <p>Am fine, any update about the room</p>
+              <p>${actualMessage.innerHTML}</p>
               <p class="user-received-timer">21:15 PM</p>
             </div>
           </div>
           <div class="input-container">
-            <input class="input" type="text" placeholder="Message" />
+            <input class="input" type="textArea" placeholder="Message" />
             <div class="smile-icon">
-              <ion-icon name="happy-outline"></ion-icon>
+              <ion-icon class='happy-icon' name="happy-outline"></ion-icon>
             </div>
             <div class="link-camera">
               <ion-icon name="link-outline"></ion-icon>
@@ -58,11 +53,13 @@ function containers(e) {
               <ion-icon name="mic-outline"></ion-icon>
             </div>
           </div>
-         </section> 
+        </section> 
         `;
       createMessages();
       // STYLE FOR CONTAINER
       // overallContainer.style.overflow = "auto";
+      headerEl.style.padding = "0";
+      removeMessage();
       break;
     }
     clickedElement = clickedElement.parentElement;
@@ -74,7 +71,7 @@ function createMessages() {
   const textContainer = document.querySelector(".text-container");
   inputEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-       const currentTime = new Date().toLocaleString("en-Us", {
+      const currentTime = new Date().toLocaleString("en-Us", {
         hour: "numeric",
         minute: "numeric",
         hour12: true,
@@ -93,6 +90,7 @@ function createMessages() {
     }
   });
 }
+
 function removeMessage() {
   document.querySelector(".arrow-back").addEventListener("click", () => {
     overallContainer.innerHTML = containerStyles;
