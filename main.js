@@ -36,7 +36,7 @@ function containers(event) {
         <h2 class='new-container-message'>New Message</h2>
           <div class="text-container">
             <div class="user-received-container">
-              <p>${actualMessage.innerHTML}</p>
+              <p>Am fine, any update about the room</p>
               <p class="user-received-timer">21:15 PM</p>
             </div>
           </div>
