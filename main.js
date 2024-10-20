@@ -1,7 +1,10 @@
 const overallContainer = document.querySelector(".overall-container");
 const container = document.querySelector(".container");
+const containerStyles = overallContainer.innerHTML;
 const mainContainer = document.getElementById("js-messages");
 const messages = document.querySelectorAll(".messages");
+const happyIcon = document.querySelector(".happy-icon");
+const headerEl = document.getElementById("header");
 
 mainContainer.addEventListener("click", containers);
 function containers(e) {
