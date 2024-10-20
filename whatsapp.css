@@ -94,6 +94,7 @@ span {
   margin-left: 4px;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .messages-container {
   margin-top: 12px;
