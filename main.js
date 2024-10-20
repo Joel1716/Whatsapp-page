@@ -90,3 +90,10 @@ function createMessages() {
     }
   });
 }
+function removeMessage() {
+  document.querySelector(".arrow-back").addEventListener("click", () => {
+    overallContainer.innerHTML = containerStyles;
+    const mainContainer = document.getElementById("js-messages");
+    mainContainer.addEventListener("click", containers);
+  });
+}
