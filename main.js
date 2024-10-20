@@ -16,7 +16,7 @@ function containers(e) {
       <div class="new-container">
         <header class="new-clicked-header">
           <div class="arrow-pic-name">
-            <ion-icon name="arrow-back-outline" class="new-icons"></ion-icon>
+            <ion-icon name="arrow-back-outline" class="new-icons arrow-back"></ion-icon>
             ${imageElement.outerHTML}
             <p>${titleElement.innerHTML}</p>
           </div>
