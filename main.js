@@ -127,7 +127,7 @@ function newStyles(actualMessage) {
         <div class="user-received-container voice-container">
           <p class="voice-message">${actualMessage.innerHTML}</p>
            <p class="user-received-timer">21:15 PM</p>
-        </div>;
+        </div>
     </div>
      <div class="input-mic-container">
         <div class="input-container">
