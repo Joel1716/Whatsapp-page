@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #f2eadf;
+  font-family: sans-serif;
+}
+.overall-container {
+  box-shadow: 5px 5px rgba(255, 255, 255, 0.15);
+  width: 45rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(95, 95, 95);
+  overflow-y: auto;
+  /* padding-top: 1rem; */
+  height: 98%;
+  max-height: 70em;
+}
+.overall-container::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  height: 100%;
+}
+main {
+  background-color: rgb(63, 63, 63);
+  padding-bottom: 1.5rem;
+  height: 100%;
+}
+.archived {
+  color: white;
+  font-size: 1.7rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.icon {
+  color: white;
+  font-size: 1.9rem;
+  margin-top: -1px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.archived-icon-container {
+  display: flex;
+  gap: 1.7rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+img {
+  width: 4.9rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+.actual-message {
+  color: rgb(151, 151, 151);
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.actual-time {
+  color: rgb(151, 151, 151);
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0.8rem;
+}
+.span {
+  background-color: rgb(91, 204, 166);
+  color: black;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.7rem;
+  border: 0;
+  border-radius: 90%;
+  position: absolute;
+  right: 0.4rem;
+}
+span {
+  display: flex;
+  align-items: center;
+}
+.open-message {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+.messages {
+  display: flex;
+  margin-left: 4px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.actual-message span {
+  height: 1.7rem;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  line-height: 1.1;
+}
+.messages-container {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-right: 1rem;
+  background-color: rgb(63, 63, 63);
+  /* overflow: auto; */
+  /* height: 100vh; */
+}
+.title {
+  font-size: 1.8rem;
+  padding-bottom: 2px;
+}
+.texts {
+  color: white;
+  padding-left: 8px;
+}
+.texts-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

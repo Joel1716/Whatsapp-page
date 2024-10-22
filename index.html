@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/whatsapp.css" />
+    <link rel="stylesheet" href="css/clicked.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <title>Whatsapp Page</title>
+  </head>
+
+  <body>
+    <section class="overall-container">
+      <div class="container">
+        <header id="header">
+          <div class="whatsapp">WhatsApp</div>
+          <div class="icons">
+            <a href="#"
+              ><ion-icon class="header-icons" name="camera-outline"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon class="header-icons" name="search-outline"></ion-icon
+            ></a>
+            <a href="#"
+              ><ion-icon
+                class="header-icons"
+                name="ellipsis-vertical-outline"
+              ></ion-icon
+            ></a>
+          </div>
+        </header>
+        <main>
+          <div class="icon-texts">
+            <p class="chats">Chats <span class="chat-number">1</span></p>
+            <p>Updates</p>
+            <p>Calls</p>
+          </div>
+          <div class="archived-icon-container">
+            <a class="icon" href="#"
+              ><ion-icon class="archived-icon" name="archive-outline"></ion-icon
+            ></a>
+            <a class="archived" href="#">Archived</a>
+          </div>
+          <div class="messages-container" id="js-messages">
+            <div class="messages">
+              <img src="img/Duck.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">Room 52</p>
+                  <p class="actual-time" style="color: rgb(91, 204, 166)">
+                    20:47
+                  </p>
+                </div>
+                <div class="open-message">
+                  <p class="actual-message">
+                    Henry: <span id="js-span-message">Nope</span>
+                  </p>
+                  <span class="span">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Chelsea.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">CHELSEA FANS</p>
+                  <p class="actual-time">Yesterday</p>
+                </div>
+                <p class="actual-message">
+                  John:
+                  <span id="js-span-message"
+                    >Happy New year to all Chelsea fans
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Computer.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">CIT STUDENTS</p>
+                  <p class="actual-time">10:23</p>
+                </div>
+                <p class="actual-message">
+                  Courserep:
+                  <span id="js-span-message"
+                    >Morning, lecturer said we have a test
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Messi.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">MESSI FANS</p>
+                  <p class="actual-time">1/4/24</p>
+                </div>
+                <p class="actual-message">
+                  Daniel:
+                  <span id="js-span-message"
+                    >Hope We are all Messi fans here
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Coding.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">DEVELOPERS</p>
+                  <p class="actual-time">17:30</p>
+                </div>
+                <p class="actual-message">
+                  Ibeh:
+                  <span id="js-span-message"
+                    >Wishing us a great year in our various tech careers
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Tennis.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">Alabi</p>
+                  <p class="actual-time">18:47</p>
+                </div>
+                <div>
+                  <p
+                    class="actual-message"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      padding-top: 1px;
+                      gap: 4px;
+                    "
+                  >
+                    <ion-icon name="checkmark-done-outline"></ion-icon
+                    ><span id="js-span-message">No it was more than 1 </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Dragonball.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">Nonso</p>
+                  <p class="actual-time">12/14/23</p>
+                </div>
+                <div>
+                  <p
+                    class="actual-message"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      padding-top: 1px;
+                      gap: 4px;
+                    "
+                  >
+                    <ion-icon name="call-outline" id="voice-icon"></ion-icon
+                    >Voice call
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="messages">
+              <img src="img/Betting.jpg" alt="" loading="lazy" />
+              <div class="texts">
+                <div class="texts-time">
+                  <p class="title">Tactics</p>
+                  <p class="actual-time">1/4/23</p>
+                </div>
+                <div>
+                  <p class="actual-message removed-container">
+                    Daniell removed you
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <!-- ICONS USAGE -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- JS-FILE -->
+    <script src="main.js"></script>
+  </body>
+</html>
