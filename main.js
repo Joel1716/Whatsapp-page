@@ -1,3 +1,5 @@
+import { mainStyle, newStyles } from "./options.js";
+import { firstArray } from "./data.js";
 /// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
 const container = document.querySelector(".container");
@@ -6,11 +8,18 @@ const mainContainer = document.getElementById("js-messages");
 const happyIcon = document.querySelector(".happy-icon");
 const headerEl = document.getElementById("header");
 
+export let matchingData;
 mainContainer.addEventListener("click", containers);
 function containers(event) {
   let clickedElement = event.target;
   while (clickedElement !== mainContainer) {
     if (clickedElement.classList.contains("messages")) {
+      const elementData = clickedElement.dataset.profileId;
+      firstArray.forEach((data) => {
+        if (elementData == data.id) {
+          matchingData = data;
+        }
+      });
       const imageElement = clickedElement.querySelector("img");
       imageElement.classList.add("clicked-image");
       const titleElement = clickedElement.querySelector(".title");
@@ -41,7 +50,8 @@ function containers(event) {
         <section class="message-send-container">
         <h2 class='new-container-message'>New Message</h2>
           ${defaultCondition}
-        </section> 
+        </section>
+      </div>
         `;
       createMessages(actualMessage);
       // STYLE FOR CONTAINER
@@ -77,6 +87,7 @@ function createMessages(actualMessage) {
         newMessageTime.innerHTML = `${currentTime} <ion-icon name="checkmark-done-outline"></ion-icon>`;
         newMessageContainer.append(newMessageText, newMessageTime);
         textContainer.append(newMessageContainer);
+        sendTextToArray(inputEl);
         inputEl.value = "";
       }
     });
@@ -90,60 +101,6 @@ function removeMessage() {
     mainContainer.addEventListener("click", containers);
   });
 }
-function mainStyle(spanActualMessage) {
-  let style = `
-          <div class="text-container">
-              <div class="user-received-container voice-container">
-                <p class="voice-message">${spanActualMessage.innerHTML}</p>
-                 <p class="user-received-timer">21:15 PM</p>
-              </div>
-          </div>
-          <div class="input-mic-container">
-            <div class="input-container">
-              <input class="input" type="textArea" placeholder="Message" />
-              <div class="smile-icon">
-                <ion-icon class='happy-icon' name="happy-outline"></ion-icon>
-              </div>
-              <div class="link-camera">
-                <ion-icon name="link-outline"></ion-icon>
-                <ion-icon name="camera-outline"></ion-icon>
-              </div>
-            </div>
-            <div class="mic-container">
-              <ion-icon name="mic-outline"></ion-icon>
-            </div>
-          </div>`;
-  return style;
-}
-function newStyles(actualMessage) {
-  if (actualMessage.classList.contains("removed-container")) {
-    let removedMessage = `<div class="text-container">
-          </div>
-          <p class="removed-message">${actualMessage.innerHTML}</p>`;
-    return removedMessage;
-  } else {
-    let voiceMessage = `
-    <div class="text-container">
-        <div class="user-received-container voice-container">
-          <p class="voice-message">${actualMessage.innerHTML}</p>
-           <p class="user-received-timer">21:15 PM</p>
-        </div>
-    </div>
-     <div class="input-mic-container">
-        <div class="input-container">
-          <input class="input" type="textArea" placeholder="Message" />
-          <div class="smile-icon">
-            <ion-icon class='happy-icon' name="happy-outline"></ion-icon>
-          </div>
-          <div class="link-camera">
-            <ion-icon name="link-outline"></ion-icon>
-            <ion-icon name="camera-outline"></ion-icon>
-          </div>
-        </div>
-        <div class="mic-container">
-          <ion-icon name="mic-outline"></ion-icon>
-        </div>
-      </div>`;
-    return voiceMessage;
-  }
+function sendTextToArray(inputEl) {
+  matchingData.arrays.push(inputEl.value);
 }
