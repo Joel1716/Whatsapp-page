@@ -1,5 +1,5 @@
-import { mainStyle, newStyles } from "/options.js";
-import { firstArray } from "/data.js";
+import { mainStyle, newStyles } from "options.js";
+import { firstArray } from "data.js";
 /// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
 const container = document.querySelector(".container");
