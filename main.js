@@ -1,11 +1,10 @@
 import { mainStyle, newStyles } from "./options.js";
 import { firstArray } from "./data.js";
+
 /// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
-const container = document.querySelector(".container");
 const containerStyles = overallContainer.innerHTML;
 const mainContainer = document.getElementById("js-messages");
-const happyIcon = document.querySelector(".happy-icon");
 const headerEl = document.getElementById("header");
 
 export let matchingData;
@@ -50,12 +49,11 @@ function containers(event) {
         <section class="message-send-container">
         <h2 class='new-container-message'>New Message</h2>
           ${defaultCondition}
-        </section>
+        </section> 
       </div>
         `;
       createMessages(actualMessage);
       // STYLE FOR CONTAINER
-      // overallContainer.style.overflow = "auto";
       headerEl.style.padding = "0";
       removeMessage();
       break;
@@ -101,6 +99,8 @@ function removeMessage() {
     mainContainer.addEventListener("click", containers);
   });
 }
+
 function sendTextToArray(inputEl) {
   matchingData.arrays.push(inputEl.value);
+  console.log(matchingData.arrays);
 }
