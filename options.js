@@ -1,5 +1,4 @@
 import { matchingData } from "./main.js";
-import dayjs from "https://unpkg.com/dayjs@1.8.9/esm/index.js";
 /// MAIN STYLE
 export function mainStyle(spanActualMessage) {
   let style = `
@@ -64,12 +63,10 @@ export function newStyles(actualMessage) {
 }
 function sendMessages() {
   let html = "";
-  const time = dayjs();
-  const timeFormat = time.format("HH:mm A");
-  matchingData.arrays.forEach((userMessage) => {
+  matchingData.arrays.forEach((userMessage, values) => {
     html += `<div class="user-container">
     <p class="voice-message">${userMessage}</p>
-     <p class="user-timer">${timeFormat}</p>
+     <p class="user-timer">${matchingData.time[values]}</p>
  </div>`;
   });
   return html;
