@@ -1,5 +1,6 @@
 import { mainStyle, newStyles } from "./options.js";
 import { firstArray } from "./data.js";
+import dayjs from "https://unpkg.com/dayjs@1.8.9/esm/index.js";
 
 /// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
@@ -70,11 +71,8 @@ function createMessages(actualMessage) {
   } else {
     inputEl.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
-        const currentTime = new Date().toLocaleString("en-Us", {
-          hour: "numeric",
-          minute: "numeric",
-          hour12: true,
-        });
+        const time = dayjs();
+        const timeFormat = time.format("HH:mm A");
         const newMessageContainer = document.createElement("div");
         newMessageContainer.classList.add("user-container");
         newMessageContainer.style.marginBottom = "1rem";
@@ -82,10 +80,10 @@ function createMessages(actualMessage) {
         newMessageText.innerHTML = inputEl.value;
         const newMessageTime = document.createElement("p");
         newMessageTime.classList.add("user-timer");
-        newMessageTime.innerHTML = `${currentTime} <ion-icon name="checkmark-done-outline"></ion-icon>`;
+        newMessageTime.innerHTML = `${timeFormat} <ion-icon name="checkmark-done-outline"></ion-icon>`;
         newMessageContainer.append(newMessageText, newMessageTime);
         textContainer.append(newMessageContainer);
-        sendTextToArray(inputEl);
+        sendTextToArray(inputEl, timeFormat);
         inputEl.value = "";
       }
     });
@@ -100,8 +98,8 @@ function removeMessage() {
   });
 }
 
-function sendTextToArray(inputEl) {
+function sendTextToArray(inputEl, timeFormat) {
   matchingData.arrays.push(inputEl.value);
+  matchingData.time.push(timeFormat);
   localStorage.setItem("messages", JSON.stringify(firstArray));
-  console.log(matchingData.arrays);
 }
