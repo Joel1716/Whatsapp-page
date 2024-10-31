@@ -1,4 +1,4 @@
-export const firstArray = [
+export const firstArray = JSON.parse(localStorage.getItem("messages")) || [
   {
     id: 1,
     arrays: [],
