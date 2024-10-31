@@ -102,5 +102,6 @@ function removeMessage() {
 
 function sendTextToArray(inputEl) {
   matchingData.arrays.push(inputEl.value);
+  localStorage.setItem("messages", JSON.stringify(firstArray));
   console.log(matchingData.arrays);
 }
