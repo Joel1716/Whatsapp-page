@@ -11,7 +11,7 @@ export function mainStyle(spanActualMessage) {
            </div>
            <div class="input-mic-container">
              <div class="input-container">
-               <input class="input" type="textArea" placeholder="Message" />
+                <textarea class="input" placeholder="Message"></textarea>
                <div class="smile-icon">
                  <ion-icon class='happy-icon' name="happy-outline"></ion-icon>
                </div>
@@ -21,7 +21,7 @@ export function mainStyle(spanActualMessage) {
                </div>
              </div>
              <div class="mic-container">
-               <ion-icon name="mic-outline"></ion-icon>
+               <ion-icon name="arrow-forward-outline"></ion-icon>
              </div>
            </div>`;
   return style;
@@ -45,7 +45,7 @@ export function newStyles(actualMessage) {
      </div>
       <div class="input-mic-container">
          <div class="input-container">
-           <input class="input" type="textArea" placeholder="Message" />
+           <textarea class="input" placeholder="Message"></textarea>
            <div class="smile-icon">
              <ion-icon class='happy-icon' name="happy-outline"></ion-icon>
            </div>
@@ -55,7 +55,7 @@ export function newStyles(actualMessage) {
            </div>
          </div>
          <div class="mic-container">
-           <ion-icon name="mic-outline"></ion-icon>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
          </div>
        </div>`;
     return voiceMessage;
