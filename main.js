@@ -9,10 +9,10 @@ const main = document.getElementById("js-main");
 const headerEl = document.getElementById("header");
 
 export let matchingData;
-mainContainer.addEventListener("click", containers);
+messagesContainer.addEventListener("click", containers);
 function containers(event) {
   let clickedElement = event.target;
-  while (clickedElement !== mainContainer) {
+  while (clickedElement !== messagesContainer) {
     if (clickedElement.classList.contains("messages")) {
       const elementData = clickedElement.dataset.profileId;
       firstArray.forEach((data) => {
