@@ -20,7 +20,7 @@ export function mainStyle(spanActualMessage) {
                  <ion-icon name="camera-outline"></ion-icon>
                </div>
              </div>
-             <div class="mic-container">
+             <div class="send-container">
                <ion-icon name="arrow-forward-outline"></ion-icon>
              </div>
            </div>`;
@@ -54,7 +54,7 @@ export function newStyles(actualMessage) {
              <ion-icon name="camera-outline"></ion-icon>
            </div>
          </div>
-         <div class="mic-container">
+         <div class="send-container">
             <ion-icon name="arrow-forward-outline"></ion-icon>
          </div>
        </div>`;
