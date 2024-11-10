@@ -97,7 +97,7 @@ function sendingMessages(inputEl) {
   inputEl.value = "";
 }
 
-function removeMessage() {
+function removeMessage(containerStyles) {
   document.querySelector(".arrow-back").addEventListener("click", () => {
     overallContainer.innerHTML = containerStyles;
     const messagesContainer = document.getElementById("js-messages");
