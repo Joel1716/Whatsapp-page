@@ -7,7 +7,9 @@ header {
   align-items: center;
   background-color: rgb(95, 95, 95);
   padding: 1.5rem 1rem;
-  /* height: 50px; */
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 header .whatsapp {
   color: white;
