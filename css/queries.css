@@ -145,4 +145,10 @@
   .new-icons {
     font-size: 2rem;
   }
+  .user-received-container {
+    width: 7.5rem;
+  }
+  .user-container {
+    width: 20rem;
+  }
 }
