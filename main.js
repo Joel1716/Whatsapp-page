@@ -1,7 +1,9 @@
 import { mainStyle, newStyles } from "./options.js";
 import { firstArray } from "./data.js";
+import { createProfileLayout, profileData } from "./profile.js";
 import dayjs from "https://unpkg.com/dayjs@1.8.9/esm/index.js";
 
+createProfileLayout();
 /// VARIABLES
 const overallContainer = document.querySelector(".overall-container");
 const messagesContainer = document.getElementById("js-messages");
@@ -23,13 +25,17 @@ function containers(event) {
       const imageElement = clickedElement.querySelector("img");
       imageElement.classList.add("clicked-image");
       const titleElement = clickedElement.querySelector(".title");
+      //// Saving the original HTML
       const actualMessage = clickedElement.querySelector(".actual-message");
       const spanActualMessage =
         clickedElement.querySelector("#js-span-message");
-      const defaultCondition =
-        spanActualMessage === null
-          ? newStyles(actualMessage)
-          : mainStyle(spanActualMessage);
+      let defaultCondition = "";
+      defaultCondition = profileData[elementData - 1].sender
+        ? mainStyle(profileData[elementData - 1].receivedMessage)
+        : newStyles(
+            actualMessage,
+            profileData[elementData - 1].receivedMessage
+          );
       const containerStyles = overallContainer.innerHTML;
       overallContainer.innerHTML = `
       <div class="new-container">
@@ -67,7 +73,6 @@ function containers(event) {
 function createMessages(actualMessage) {
   const sendContainer = document.querySelector(".send-container");
   const inputEl = document.querySelector(".input");
-  const textContainer = document.querySelector(".text-container");
   if (actualMessage.classList.contains("removed-container")) {
     return;
   } else {
@@ -99,7 +104,7 @@ function sendingMessages(inputEl) {
 
 function removeMessage(containerStyles) {
   document.querySelector(".arrow-back").addEventListener("click", () => {
-    overallContainer.innerHTML = containerStyles;
+    createProfileLayout();
     const messagesContainer = document.getElementById("js-messages");
     messagesContainer.addEventListener("click", containers);
   });
