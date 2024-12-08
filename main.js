@@ -10,6 +10,7 @@ const messagesContainer = document.getElementById("js-messages");
 const main = document.getElementById("js-main");
 const headerEl = document.getElementById("header");
 
+const time = dayjs();
 export let matchingData;
 messagesContainer.addEventListener("click", containers);
 function containers(event) {
@@ -86,7 +87,6 @@ function createMessages(actualMessage) {
 function sendingMessages(inputEl) {
   const textContainer = document.querySelector(".text-container");
   /////
-  const time = dayjs();
   const timeMeridianFormat = time.format("HH:mm A");
   const timeFormat = time.format("HH:mm");
   const newMessageContainer = document.createElement("div");
