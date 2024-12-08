@@ -82,7 +82,6 @@ span {
 .open-message {
   display: flex;
   align-items: center;
-  padding-top: 2px;
 }
 .messages {
   display: flex;
