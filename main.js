@@ -87,7 +87,8 @@ function sendingMessages(inputEl) {
   const textContainer = document.querySelector(".text-container");
   /////
   const time = dayjs();
-  const timeFormat = time.format("HH:mm A");
+  const timeMeridianFormat = time.format("HH:mm A");
+  const timeFormat = time.format("HH:mm");
   const newMessageContainer = document.createElement("div");
   newMessageContainer.classList.add("user-container");
   newMessageContainer.style.marginBottom = "1rem";
@@ -95,10 +96,10 @@ function sendingMessages(inputEl) {
   newMessageText.innerHTML = inputEl.value;
   const newMessageTime = document.createElement("p");
   newMessageTime.classList.add("user-timer");
-  newMessageTime.innerHTML = `${timeFormat} <ion-icon name="checkmark-done-outline"></ion-icon>`;
+  newMessageTime.innerHTML = `${timeMeridianFormat} <ion-icon name="checkmark-done-outline"></ion-icon>`;
   newMessageContainer.append(newMessageText, newMessageTime);
   textContainer.append(newMessageContainer);
-  sendTextToArray(inputEl, timeFormat);
+  sendTextToArray(inputEl,timeMeridianFormat, timeFormat);
   inputEl.value = "";
 }
 
@@ -110,8 +111,9 @@ function removeMessage(containerStyles) {
   });
 }
 
-function sendTextToArray(inputEl, timeFormat) {
+function sendTextToArray(inputEl,timeMeridianFormat, timeFormat) {
   matchingData.arrays.push(inputEl.value);
+  matchingData.timeMeridian.push(timeMeridianFormat);
   matchingData.time.push(timeFormat);
   localStorage.setItem("messages", JSON.stringify(firstArray));
 }
