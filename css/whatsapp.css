@@ -75,16 +75,6 @@ img {
   position: absolute;
   right: 0.8rem;
 }
-.span {
-  background-color: rgb(91, 204, 166);
-  color: black;
-  font-size: 1.2rem;
-  padding: 0.4rem 0.7rem;
-  border: 0;
-  border-radius: 90%;
-  position: absolute;
-  right: 0.4rem;
-}
 span {
   display: flex;
   align-items: center;
@@ -101,12 +91,19 @@ span {
   position: relative;
   cursor: pointer;
 }
-.actual-message span {
+.actual-message span,
+.new-message {
   height: 1.7rem;
   overflow: hidden;
   display: flex;
   align-items: start;
   line-height: 1.1;
+}
+.actual-message span {
+  padding: 0.1rem 0 0 0;
+}
+.new-message {
+  width: 35rem;
 }
 .messages-container {
   margin-top: 12px;
@@ -115,8 +112,6 @@ span {
   gap: 13px;
   padding-right: 1rem;
   background-color: rgb(63, 63, 63);
-  /* overflow: auto; */
-  /* height: 100vh; */
 }
 .title {
   font-size: 1.8rem;
