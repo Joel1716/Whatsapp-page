@@ -87,12 +87,6 @@ function createProfileMessages() {
         }
       }
     });
-    // //// FOR MESSAGES THAT HAVEN'T BEEN READ
-    // const unreadMessage =
-    //   profiles.unreadMessage !== undefined
-    //     ? ` <span class="span">${profiles.unreadMessage}</span>`
-    //     : "";
-    /// FOR VIDEO CALL OR REMOVED
     const videoOrRemoved =
       profiles.id !== 8
         ? `<div>
@@ -121,8 +115,6 @@ function createProfileMessages() {
           <ion-icon name="checkmark-done-outline"></ion-icon><span class='new-message'>${profiles.sentMessage}</span>
             </p>
           </div>`;
-    ////
-    const removeNotification = profiles.sentMessage !== "";
     /// Message LAYOUT
     profileMessages += `
     <div class="messages" data-profile-id="${profiles.id}">
