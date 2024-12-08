@@ -136,6 +136,9 @@
    .actual-message span {
     padding: 0;
   }
+   .open-message {
+    padding-top: 0;
+  }
 }
 @media (max-width: 21em) {
   img {
