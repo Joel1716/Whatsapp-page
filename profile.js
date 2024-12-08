@@ -8,7 +8,6 @@ export const profileData = [
     receivedMessage: "Nope",
     sender: "Henry:",
     sentMessage: "",
-    unreadMessage: 1,
   },
   {
     id: 2,
@@ -82,13 +81,13 @@ function createProfileMessages() {
       if (data.id === profiles.id) {
         messageData = data;
         profiles.sentMessage = messageData.arrays.at(-1);
+        if (messageData.time.at(-1) === undefined) {
+          return;
+        } else {
+          profiles.actualTime = messageData.time.at(-1);
+        }
       }
     });
-    //// FOR MESSAGES THAT HAVEN'T BEEN READ
-    const unreadMessage =
-      profiles.unreadMessage !== undefined
-        ? ` <span class="span">${profiles.unreadMessage}</span>`
-        : "";
     /// FOR VIDEO CALL OR REMOVED
     const videoOrRemoved =
       profiles.id !== 8
@@ -96,21 +95,18 @@ function createProfileMessages() {
             <p class="actual-message">
              ${profiles.receivedMessage}
             </p>
-          ${unreadMessage}
           </div>`
         : `<div>
             <p class="actual-message removed-container">
              ${profiles.receivedMessage}
             </p>
-          ${unreadMessage}
           </div>`;
     /// FOR NON-GROUPS
     const noSender =
       profiles.sender !== undefined
         ? `<p class="actual-message">
                     ${profiles.sender} <span id="js-span-message">${profiles.receivedMessage}</span>
-                  </p>
-                  ${unreadMessage}`
+                  </p>`
         : `${videoOrRemoved}`;
     //// Profiles that have a sent message
     const sendMessage =
@@ -163,7 +159,7 @@ export function createProfileLayout() {
         </header>
         <main id="js-main">
           <div class="icon-texts">
-            <p class="chats">Chats <span class="chat-number">1</span></p>
+            <p class="chats">Chats</p>
             <p>Updates</p>
             <p>Calls</p>
           </div>
