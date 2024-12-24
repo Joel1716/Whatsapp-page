@@ -1,4 +1,7 @@
 /* STYLES AFTER CLICKING A CONTAINER */
+.new-container::-webkit-scrollbar {
+  display: none;
+}
 .new-clicked-header {
   display: flex;
   align-items: center;
