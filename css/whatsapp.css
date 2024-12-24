@@ -29,6 +29,9 @@ body {
 .container {
   height: 100%;
 }
+.container::-webkit-scrollbar {
+  display: none;
+}
 main {
   background-color: rgb(63, 63, 63);
   padding-bottom: 1.5rem;
