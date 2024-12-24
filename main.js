@@ -109,6 +109,15 @@ function removeMessage(containerStyles) {
     const messagesContainer = document.getElementById("js-messages");
     messagesContainer.addEventListener("click", containers);
   });
+  window.addEventListener("popstate", function (event) {
+    if (event.state) {
+      createProfileLayout();
+      const messagesContainer = document.getElementById("js-messages");
+      messagesContainer.addEventListener("click", containers);
+    } else {
+      return;
+    }
+  });
 }
 
 function sendTextToArray(inputEl,timeMeridianFormat, timeFormat) {
